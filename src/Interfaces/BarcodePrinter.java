@@ -1,0 +1,9 @@
+package Interfaces;
+
+public interface BarcodePrinter {
+	
+	/* Print a bicycleID as a barcode.
+	 * Garage.BicycleGarageManager.Bicycle ID should be a string of 5 characters, where every
+	 * character can be '0', '1',... '9'. */
+	public void printBarcode(String bicycleID);
+}

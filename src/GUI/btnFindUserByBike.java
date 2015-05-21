@@ -10,7 +10,7 @@ public class btnFindUserByBike extends JMenuItem implements ActionListener {
 	private GarageGUI gui;
 	
 	public btnFindUserByBike(GarageGUI gui) {
-		super("User With Bike");
+		super("Garage.BicycleGarageManager.User With Bike");
 		this.gui = gui;
 		addActionListener(this);
 	}

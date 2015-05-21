@@ -7,7 +7,7 @@ import java.util.*;
 public class GarageGUI extends JFrame {
 	private JTextArea messageArea1;
 	private JTextArea messageArea2;
-	//private BicycleGarageManager kebab;
+	//private Garage.BicycleGarageManager kebab;
 	
 	public GarageGUI(){
 		
