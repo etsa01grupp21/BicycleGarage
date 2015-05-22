@@ -4,14 +4,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class btnAddBike extends JMenuItem implements ActionListener {
+public class RemoveBikeButton extends JButton implements ActionListener {
 
-    private GarageGUI gui;
-
-    public btnAddBike(GarageGUI gui) {
-        super("Add Bike");
-
-        this.gui = gui;
+    public RemoveBikeButton(GarageGUI garageGUI) {
+        super("Remove Bike");
         addActionListener(this);
     }
 
@@ -20,3 +16,4 @@ public class btnAddBike extends JMenuItem implements ActionListener {
         String nbr = JOptionPane.showInputDialog("Enter Number");
     }
 }
+

@@ -1,5 +1,6 @@
 package Garage;
 
+import GUI.GarageGUI;
 import Interfaces.BarcodePrinter;
 import Interfaces.BarcodeReader;
 import Interfaces.ElectronicLock;
@@ -21,6 +22,6 @@ public class BicycleGarage {
         readerExit.register(manager);
     }
     public static void main(String[] args) {
-        new BicycleGarage();
+        new GarageGUI(new BicycleGarageManager());
     }
 }

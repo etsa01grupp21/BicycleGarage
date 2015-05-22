@@ -2,14 +2,13 @@ package Garage;
 
 public class Bicycle {
     private String name;
-    private String ID;
-    private long lastUsed;
+    private String id;
     private User owner;
     private boolean inside;
 
-    public Bicycle(String ID, String name, User owner) {
+    public Bicycle(String id, String name, User owner) {
         this.name = name;
-        this.ID = ID;
+        this.id = id;
         this.owner = owner;
         this.inside = false;
     }
@@ -18,24 +17,38 @@ public class Bicycle {
         return name;
     }
 
-    public String getID() {
-        return ID;
+    public String getId() {
+        return id;
     }
 
-    public long getLastUsed() {
-        return lastUsed;
+    public String getLastUsed() {
+        return null;
     }
 
     public User getOwner() {
         return owner;
     }
 
-    public void setInside(boolean newInside) {
-        this.inside = newInside;
-        this.lastUsed = System.currentTimeMillis();
+    public void setInside(boolean inside) {
+        if (this.inside == inside) {
+            //Bike is already inside/outside
+        } else {
+            this.inside = inside;
+            if (inside) {
+                //create timestamp
+            } else {
+                //add stampout
+            }
+        }
     }
 
-    public boolean getInside() {
-        return inside;
+    public boolean isInside() {
+        return this.inside;
     }
+
+    @Override
+    public String toString() {
+        return this.name + "    (" + this.id + ")";
+    }
+
 }

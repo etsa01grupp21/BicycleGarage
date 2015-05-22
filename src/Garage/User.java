@@ -1,20 +1,43 @@
 package Garage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
-    private String ID;
+    private int id;
+    private String pin;
     private String name;
     private boolean inside;
     private int phoneNbr;
+    private List<Bicycle> bicycles;
 
-    public User(String ID, String name, int phoneNbr) {
-        this.ID = ID;
+    public String getPin() {
+        return pin;
+    }
+
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+    public User(String name, int id, int phoneNbr) {
+        this.id = id;
         this.name = name;
         this.inside = false;
         this.phoneNbr = phoneNbr;
+        this.pin = CodeGenerator.getPin();
+        this.bicycles = new ArrayList<>();
     }
 
-    public String getID() {
-        return ID;
+    public void addBicycle(Bicycle bicycle) {
+        bicycles.add(bicycle);
+    }
+
+    public List<Bicycle> getBicycles() {
+        return bicycles;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
@@ -31,5 +54,10 @@ public class User {
 
     public boolean getInside() {
         return inside;
+    }
+
+    @Override
+    public String toString() {
+        return this.name + "    (" + id + ")" + "PIN: " + pin;
     }
 }

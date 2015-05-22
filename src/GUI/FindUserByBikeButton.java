@@ -1,16 +1,15 @@
 package GUI;
 
-import java.awt.event.ActionEvent;
 import javax.swing.*;
-import javax.swing.JOptionPane;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class btnFindUserByBike extends JMenuItem implements ActionListener {
+public class FindUserByBikeButton extends JMenuItem implements ActionListener {
 	
 	private GarageGUI gui;
 	
-	public btnFindUserByBike(GarageGUI gui) {
-		super("Garage.BicycleGarageManager.User With Bike");
+	public FindUserByBikeButton(GarageGUI gui) {
+		super("Search user by bike");
 		this.gui = gui;
 		addActionListener(this);
 	}

@@ -1,17 +1,14 @@
 package GUI;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Iterator;
-import java.util.Set;
 
-import javax.swing.JMenuItem;
-
-public class btnViewAllUsers extends JMenuItem implements ActionListener {
+public class ViewAllUsersButton extends JMenuItem implements ActionListener {
 
 	private GarageGUI gui;
 	
-	public btnViewAllUsers(GarageGUI gui) {
+	public ViewAllUsersButton(GarageGUI gui) {
 		super("View All Users");
 		this.gui = gui;
 		addActionListener((ActionListener) this);
