@@ -58,6 +58,10 @@ public class User {
 
     @Override
     public String toString() {
-        return this.name + "    (" + id + ")" + "PIN: " + pin;
+        return this.name + "    ("+ id +")" + "    PIN: " + pin;
+    }
+
+    public void removeBicycle(Bicycle bicycle) {
+        bicycles.remove(bicycle);
     }
 }

@@ -14,7 +14,7 @@ public class BicycleGarageManager {
 
     private Map<String, User> pinToUser;
     private Map<Integer, User> idToUser;
-    private Map<Integer, Bicycle> barcodeToBicycle;
+    private Map<String, Bicycle> barcodeToBicycle;
     private List<User> users;
     private StringBuilder pin;
 
@@ -48,8 +48,16 @@ public class BicycleGarageManager {
             pinToUser.remove(u.getPin());
             CodeGenerator.addPin(u.getPin());
             users.remove(u);
+            for(Bicycle bike : u.getBicycles()){
+                removeBicycle(bike);
+            }
         }
         return true;
+    }
+
+    public void removeBicycle(Bicycle bike) {
+        barcodeToBicycle.remove(bike);
+        CodeGenerator.addBarcode(bike.getBarcode());
     }
 
     public void registerHardwareDrivers(BarcodePrinter printer,
@@ -115,13 +123,13 @@ public class BicycleGarageManager {
     }
 
     public void populateUsers() {
-        Random rand = new Random();
         for(int i = 0; i<10; i++){
             String s = String.valueOf(i);
-            User u = new User("YOLOSWAG #" + s, i, i);
+            User u = new User("YOLOSWAG#" + s, i, i);
             for(int b = 0; b<5; b++){
-                Bicycle bike = new Bicycle("ID:" + rand.nextInt(100), "NAME:" + b, u);
+                Bicycle bike = new Bicycle("NAME:" + b, u);
                 u.addBicycle(bike);
+                barcodeToBicycle.put(bike.getBarcode(), bike);
             }
             idToUser.put(i, u);
             pinToUser.put(u.getPin(), u);
@@ -131,5 +139,18 @@ public class BicycleGarageManager {
 
     public List<User> getUsers() {
         return users;
+    }
+
+    public void addBicycle(Bicycle bike) {
+        barcodeToBicycle.put(bike.getBarcode(), bike);
+    }
+
+    public Bicycle getBicycle(String barcode) {
+        System.out.println(barcodeToBicycle.size());
+        return barcodeToBicycle.get(barcode);
+    }
+
+    public User getUser(int i) {
+        return idToUser.get(i);
     }
 }

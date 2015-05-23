@@ -14,6 +14,7 @@ public class GarageGUI extends JFrame {
     private JList<User> users;
     private JList<Bicycle> bicycles;
     private User selectedUser;
+    private Bicycle selectedBicycle;
 
     public GarageGUI(BicycleGarageManager manager) {
         this.manager = manager;
@@ -22,7 +23,12 @@ public class GarageGUI extends JFrame {
 
     private void createAndShowGUI() {
         JFrame frame = new JFrame("Bicyclegarage");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         addComponentsToPane(frame.getContentPane());
         setLayout(new BorderLayout());
         frame.pack();
@@ -79,6 +85,15 @@ public class GarageGUI extends JFrame {
     private JList<Bicycle> createBicycles() {
         DefaultListModel<Bicycle> listModel = new DefaultListModel<>();
         bicycles = new JList<>(listModel);
+        bicycles.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if (e.getValueIsAdjusting()) {
+                    Bicycle selectedBike = bicycles.getSelectedValue();
+                    updatedSelectedBicycle(selectedBike);
+                }
+            }
+        });
         return bicycles;
     }
 
@@ -107,19 +122,28 @@ public class GarageGUI extends JFrame {
         this.selectedUser = user;
     }
 
+    private void updatedSelectedBicycle(Bicycle bicycle) {
+        this.selectedBicycle = bicycle;
+    }
+
     private void updateBicyclesModel(User user) {
         DefaultListModel<Bicycle> listModel = (DefaultListModel<Bicycle>) bicycles.getModel();
         listModel.clear();
-        for (Bicycle bike : user.getBicycles()) {
-            listModel.addElement(bike);
+        if (user != null) {
+            for (Bicycle bike : user.getBicycles()) {
+                listModel.addElement(bike);
+            }
         }
         bicycles.setModel(listModel);
     }
 
     private void updateUsersModel(User user, boolean add) {
         DefaultListModel<User> listModel = (DefaultListModel<User>) users.getModel();
-        if(add) listModel.addElement(user);
-        else listModel.removeElement(user);
+        if (add) listModel.addElement(user);
+        else {
+            listModel.removeElement(user);
+            if (listModel.isEmpty()) updateBicyclesModel(null);
+        }
         users.setModel(listModel);
     }
 
@@ -135,14 +159,54 @@ public class GarageGUI extends JFrame {
     }
 
     public void removeUser() {
-        if(selectedUser == null){
-            JOptionPane.showMessageDialog(null,
-                    "No user selected");
-        }else {
-            manager.removeUser(selectedUser);
-            updateUsersModel(selectedUser, false);
-            selectedUser = null;
-        }
+        manager.removeUser(selectedUser);
+        updateUsersModel(selectedUser, false);
+        selectedUser = null;
+    }
 
+    public void addBike(String bikeName) {
+        User user = getSelectedUser();
+        Bicycle bike = new Bicycle(bikeName, user);
+        user.addBicycle(bike);
+        manager.addBicycle(bike);
+        updateBicyclesModel(user);
+    }
+
+    public void removeBicycle() {
+        manager.removeBicycle(selectedBicycle);
+        selectedBicycle.delete();
+        updateBicyclesModel(selectedBicycle.getOwner());
+        selectedBicycle = null;
+    }
+
+    public User getSelectedUser() {
+        return this.selectedUser;
+    }
+
+    public Bicycle getSelectedBicycle() {
+        return this.selectedBicycle;
+    }
+
+    public void findUserByBarcode(String barcode) {
+        Bicycle bicycle = manager.getBicycle(barcode);
+        User user = bicycle.getOwner();
+        if(user == null) JOptionPane.showMessageDialog(null, "No user found");
+        else{
+            users.setSelectedValue(user, true);
+            updateBicyclesModel(user);
+            bicycles.setSelectedValue(bicycle, true);
+            this.selectedUser = user;
+            this.selectedBicycle = bicycle;
+        }
+    }
+
+    public void findUserById(int i) {
+        User user = manager.getUser(i);
+        if(user == null) JOptionPane.showMessageDialog(null, "No user found");
+        else{
+            users.setSelectedValue(user, true);
+            updateBicyclesModel(user);
+            this.selectedUser = user;
+        }
     }
 }

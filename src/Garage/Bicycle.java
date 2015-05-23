@@ -2,13 +2,13 @@ package Garage;
 
 public class Bicycle {
     private String name;
-    private String id;
+    private String barcode;
     private User owner;
     private boolean inside;
 
-    public Bicycle(String id, String name, User owner) {
+    public Bicycle(String name, User owner) {
         this.name = name;
-        this.id = id;
+        this.barcode = CodeGenerator.getBarcode();
         this.owner = owner;
         this.inside = false;
     }
@@ -17,8 +17,8 @@ public class Bicycle {
         return name;
     }
 
-    public String getId() {
-        return id;
+    public String getBarcode() {
+        return barcode;
     }
 
     public String getLastUsed() {
@@ -48,7 +48,10 @@ public class Bicycle {
 
     @Override
     public String toString() {
-        return this.name + "    (" + this.id + ")";
+        return this.name + "    (" + this.barcode + ")";
     }
 
+    public void delete() {
+        this.owner.removeBicycle(this);
+    }
 }

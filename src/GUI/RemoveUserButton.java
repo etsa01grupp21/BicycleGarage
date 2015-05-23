@@ -16,7 +16,12 @@ public class RemoveUserButton extends JButton implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        gui.removeUser();
+        if (gui.getSelectedUser() == null) {
+            JOptionPane.showMessageDialog(null,
+                    "No user selected");
+        } else {
+            gui.removeUser();
+        }
     }
 }
 
