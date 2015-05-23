@@ -189,9 +189,9 @@ public class GarageGUI extends JFrame {
 
     public void findUserByBarcode(String barcode) {
         Bicycle bicycle = manager.getBicycle(barcode);
-        User user = bicycle.getOwner();
-        if(user == null) JOptionPane.showMessageDialog(null, "No user found");
-        else{
+        if (bicycle == null) JOptionPane.showMessageDialog(null, "No user found");
+        else {
+            User user = bicycle.getOwner();
             users.setSelectedValue(user, true);
             updateBicyclesModel(user);
             bicycles.setSelectedValue(bicycle, true);
@@ -202,8 +202,8 @@ public class GarageGUI extends JFrame {
 
     public void findUserById(int i) {
         User user = manager.getUser(i);
-        if(user == null) JOptionPane.showMessageDialog(null, "No user found");
-        else{
+        if (user == null) JOptionPane.showMessageDialog(null, "No user found");
+        else {
             users.setSelectedValue(user, true);
             updateBicyclesModel(user);
             this.selectedUser = user;

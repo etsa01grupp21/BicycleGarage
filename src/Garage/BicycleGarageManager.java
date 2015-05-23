@@ -44,19 +44,19 @@ public class BicycleGarageManager {
         User u = idToUser.get(user.getId());
         if(u == null) return false;
         else {
+            for(Bicycle bike : u.getBicycles()){
+                removeBicycle(bike);
+            }
             idToUser.remove(u.getId());
             pinToUser.remove(u.getPin());
             CodeGenerator.addPin(u.getPin());
             users.remove(u);
-            for(Bicycle bike : u.getBicycles()){
-                removeBicycle(bike);
-            }
         }
         return true;
     }
 
     public void removeBicycle(Bicycle bike) {
-        barcodeToBicycle.remove(bike);
+        barcodeToBicycle.remove(bike.getBarcode());
         CodeGenerator.addBarcode(bike.getBarcode());
     }
 
