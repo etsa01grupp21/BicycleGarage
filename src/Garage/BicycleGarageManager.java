@@ -115,6 +115,7 @@ public class BicycleGarageManager {
      * keypad at the entry door. The following characters could be
      * pressed: '0', '1',... '9', '*', '#'. */
     public void entryCharacter(char c) {
+        pin.append(c);
         if (pin.length() > 3) {
             User currentUser = pinToUser.get(pin.toString());
             if (currentUser == null) {
@@ -124,8 +125,6 @@ public class BicycleGarageManager {
                 entryLock.open(15);
             }
             pin.setLength(0);
-        } else {
-            pin.append(c);
         }
     }
 
