@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca6329f3-b16d-45d2-8a77-cf0d15511899" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GUI/FindUserByIdItem.java" />
+      <change type="DELETED" beforePath="C:\Users\Jonathan\Documents\Git\BicycleGarage\src\GUI\FindUserByBikeButton.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Jonathan\Documents\Git\BicycleGarage\src\GUI\FindUserByIdButton.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/AddBikeButton.java" afterPath="$PROJECT_DIR$/src/GUI/AddBikeButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/AddUserButton.java" afterPath="$PROJECT_DIR$/src/GUI/AddUserButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestDrivers/BarcodePrinterTestDriver.java" afterPath="$PROJECT_DIR$/src/TestDrivers/BarcodePrinterTestDriver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestDrivers/BarcodeReaderTestDriver.java" afterPath="$PROJECT_DIR$/src/TestDrivers/BarcodeReaderTestDriver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Garage/Bicycle.java" afterPath="$PROJECT_DIR$/src/Garage/Bicycle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Garage/BicycleGarage.java" afterPath="$PROJECT_DIR$/src/Garage/BicycleGarage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Garage/BicycleGarageManager.java" afterPath="$PROJECT_DIR$/src/Garage/BicycleGarageManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Garage/CodeGenerator.java" afterPath="$PROJECT_DIR$/src/Garage/CodeGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestDrivers/ElectronicLockTestDriver.java" afterPath="$PROJECT_DIR$/src/TestDrivers/ElectronicLockTestDriver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/GarageGUI.java" afterPath="$PROJECT_DIR$/src/GUI/GarageGUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TestDrivers/PinCodeTerminalTestDriver.java" afterPath="$PROJECT_DIR$/src/TestDrivers/PinCodeTerminalTestDriver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/RemoveBikeButton.java" afterPath="$PROJECT_DIR$/src/GUI/RemoveBikeButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/RemoveUserButton.java" afterPath="$PROJECT_DIR$/src/GUI/RemoveUserButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Garage/User.java" afterPath="$PROJECT_DIR$/src/Garage/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI/ViewAllUsersButton.java" afterPath="$PROJECT_DIR$/src/GUI/ViewAllUsersButton.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ETSA01.iws" />
@@ -32,30 +47,139 @@
         <entry file="file://$PROJECT_DIR$/src/GUI/GarageGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+              <caret line="245" column="33" selection-start-line="245" selection-start-column="33" selection-end-line="245" selection-end-column="33" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#GarageGUI#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#createAndShowGUI#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#initializeSaveOnExit#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#addComponentsToPane#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#addUserButton#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#getMainPanel#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#getMenu#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#createBicycles#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#createUsers#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#updateBicyclesModel#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#updateUsersModel#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#addUser#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#removeUser#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#addBike#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#removeBicycle#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#findUserByBarcode#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#findUserById#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#updateCurrentUserModel#0;class#GarageGUI#0" expanded="false" />
+                <element signature="method#generateNewPin#0;class#GarageGUI#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BicycleGarageManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Garage/BicycleGarageManager.java">
+      <file leaf-file-name="GenerateNewPinItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/GenerateNewPinItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6195286">
-              <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FindUserByIdButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/FindUserByIdButton.java">
+      <file leaf-file-name="BicycleGarageManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Garage/BicycleGarageManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+              <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+              <folding>
+                <element signature="method#BicycleGarageManager#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#registerHardwareDrivers#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#addUser#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#removeUser#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#addBicycle#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#removeBicycle#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#updatePin#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#entryBarcode#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#exitBarcode#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#entryCharacter#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#populateUsers#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#fileWrite#0;class#BicycleGarageManager#0" expanded="false" />
+                <element signature="method#fileRead#0;class#BicycleGarageManager#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Garage/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+              <folding>
+                <element signature="e#1231#1232#0" expanded="true" />
+                <element signature="e#1327#1328#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bicycle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Garage/Bicycle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1440#1441#0" expanded="true" />
+                <element signature="e#1478#1479#0" expanded="true" />
+                <element signature="e#1589#1590#0" expanded="true" />
+                <element signature="e#1659#1660#0" expanded="true" />
+                <element signature="e#1817#1818#0" expanded="true" />
+                <element signature="e#1901#1902#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewStatisticsItem.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/ViewStatisticsItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.2306397">
+              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
+                <element signature="e#1059#1060#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddUserButton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/AddUserButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RemoveBikeButton.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/RemoveBikeButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="19" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChangePhoneNumberItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI/ChangePhoneNumberItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,10 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ETSA01/src/BarcodePrinter.java" />
-        <option value="$PROJECT_DIR$/ETSA01/src/BicycleGarage.java" />
-        <option value="$PROJECT_DIR$/ETSA01/src/BicycleGarageManager.java" />
-        <option value="$PROJECT_DIR$/src/BarcodePrinter.java" />
         <option value="$PROJECT_DIR$/src/BarcodeReader.java" />
         <option value="$PROJECT_DIR$/src/PinCodeTerminal.java" />
         <option value="$PROJECT_DIR$/src/User.java" />
@@ -103,12 +223,8 @@
         <option value="$PROJECT_DIR$/src/Garage/BarcodePrinter.java" />
         <option value="$PROJECT_DIR$/src/Garage/BarcodePrinterDriver.java" />
         <option value="$PROJECT_DIR$/src/Garage/BarcodeReaderDriver.java" />
-        <option value="$PROJECT_DIR$/src/TestDrivers/BarcodePrinterTestDriver.java" />
-        <option value="$PROJECT_DIR$/src/TestDrivers/PinCodeTerminalTestDriver.java" />
         <option value="$PROJECT_DIR$/src/TestDrivers/BarcodeReaderExitTestDriver.java" />
         <option value="$PROJECT_DIR$/src/TestDrivers/BarcodeReaderEntryTestDriver.java" />
-        <option value="$PROJECT_DIR$/src/TestDrivers/BarcodeReaderTestDriver.java" />
-        <option value="$PROJECT_DIR$/src/TestDrivers/ElectronicLockTestDriver.java" />
         <option value="$PROJECT_DIR$/src/Interfaces/ElectronicLock.java" />
         <option value="$PROJECT_DIR$/src/Garage/Timestamp.java" />
         <option value="$PROJECT_DIR$/src/Garage/LogTime.java" />
@@ -117,18 +233,28 @@
         <option value="$PROJECT_DIR$/src/GUI/ViewAllUsersButton.java" />
         <option value="$PROJECT_DIR$/src/GUI/AddUserOptionPane.java" />
         <option value="$PROJECT_DIR$/src/GUI/AddUserPanel.java" />
-        <option value="$PROJECT_DIR$/src/GUI/AddUserButton.java" />
-        <option value="$PROJECT_DIR$/src/Garage/BicycleGarage.java" />
         <option value="$PROJECT_DIR$/src/GUI/AddBikeButton.java" />
         <option value="$PROJECT_DIR$/src/GUI/RemoveUserButton.java" />
         <option value="$PROJECT_DIR$/src/GUI/RemoveBikeButton.java" />
-        <option value="$PROJECT_DIR$/src/Garage/Bicycle.java" />
         <option value="$PROJECT_DIR$/src/GUI/FindUserByBikeButton.java" />
-        <option value="$PROJECT_DIR$/src/Garage/CodeGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Garage/User.java" />
         <option value="$PROJECT_DIR$/src/GUI/FindUserByIdButton.java" />
-        <option value="$PROJECT_DIR$/src/Garage/BicycleGarageManager.java" />
+        <option value="$PROJECT_DIR$/src/TestDrivers/BarcodePrinterTestDriver.java" />
+        <option value="$PROJECT_DIR$/src/TestDrivers/BarcodeReaderTestDriver.java" />
+        <option value="$PROJECT_DIR$/src/TestDrivers/ElectronicLockTestDriver.java" />
+        <option value="$PROJECT_DIR$/src/TestDrivers/PinCodeTerminalTestDriver.java" />
+        <option value="$PROJECT_DIR$/src/GUI/FindUserByBikeItem.java" />
+        <option value="$PROJECT_DIR$/src/GUI/ChangePhoneNumberItem.java" />
+        <option value="$PROJECT_DIR$/src/Garage/BicycleGarage.java" />
+        <option value="$PROJECT_DIR$/src/Garage/CodeGenerator.java" />
+        <option value="$PROJECT_DIR$/src/GUI/FindUserByIdItem.java" />
+        <option value="$PROJECT_DIR$/src/GUI/ViewStatistics.java" />
+        <option value="$PROJECT_DIR$/src/GUI/AddUserButton.java" />
+        <option value="$PROJECT_DIR$/src/GUI/ViewStatisticsItem.java" />
+        <option value="$PROJECT_DIR$/src/Garage/Bicycle.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GenerateNewPinItem.java" />
         <option value="$PROJECT_DIR$/src/GUI/GarageGUI.java" />
+        <option value="$PROJECT_DIR$/src/Garage/User.java" />
+        <option value="$PROJECT_DIR$/src/Garage/BicycleGarageManager.java" />
       </list>
     </option>
   </component>
@@ -175,9 +301,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -209,9 +332,66 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestDrivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BicycleGarage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BicycleGarage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BicycleGarage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BicycleGarage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GUI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BicycleGarage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BicycleGarage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Garage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,7 +403,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
@@ -231,6 +411,9 @@
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="GUI" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ETSA01/src" />
       <recent name="$PROJECT_DIR$/src" />
@@ -568,12 +751,13 @@
       <workItem from="1432318164594" duration="8805000" />
       <workItem from="1432342223536" duration="116000" />
       <workItem from="1432342777252" duration="168000" />
-      <workItem from="1432386900508" duration="711000" />
+      <workItem from="1432386900508" duration="814000" />
+      <workItem from="1432490820632" duration="9545000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47261000" />
+    <option name="totallyTimeSpent" value="56909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -587,22 +771,22 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32683983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32683983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24200426" sideWeight="0.49356914" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32683983" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24200426" sideWeight="0.50643086" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39935064" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32721713" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -617,7 +801,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -625,37 +811,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Garage/Bicycle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GarageGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Garage/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Garage/CodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Garage/BicycleGarageManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -689,7 +844,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="25" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#GarageGUI#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#createAndShowGUI#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#initializeSaveOnExit#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#addComponentsToPane#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#addUserButton#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#getMainPanel#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#getMenu#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#createBicycles#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#createUsers#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#updateBicyclesModel#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#updateUsersModel#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#addUser#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#removeUser#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#addBike#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#removeBicycle#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#findUserByBarcode#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#findUserById#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#updateCurrentUserModel#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#generateNewPin#0;class#GarageGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -898,20 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestDrivers/BarcodeReaderEntryTestDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2583732">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestDrivers/BarcodePrinterTestDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31578946">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Interfaces/PinCodeTerminal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.114832535">
@@ -923,27 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14354067">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestDrivers/BarcodeReaderTestDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.028708134">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestDrivers/ElectronicLockTestDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31578946">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestDrivers/PinCodeTerminalTestDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2185008">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -961,52 +1099,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Garage/BicycleGarage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/AddUserButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="82" selection-start-line="23" selection-start-column="82" selection-end-line="23" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/javax/swing/JList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="2338" column="13" selection-start-line="2338" selection-start-column="13" selection-end-line="2338" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/FindUserByBikeButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34343433">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Garage/CodeGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68686867">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Garage/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6851852">
-          <caret line="60" column="51" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/AddBikeButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6296296">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1017,24 +1113,176 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestDrivers/BarcodePrinterTestDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestDrivers/BarcodeReaderEntryTestDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestDrivers/BarcodeReaderTestDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestDrivers/ElectronicLockTestDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.25926">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_40/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="237" column="12" selection-start-line="237" selection-start-column="12" selection-end-line="237" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Garage/BicycleGarage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57239056">
+          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+          <folding>
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestDrivers/PinCodeTerminalTestDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2760943">
+          <caret line="63" column="28" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Garage/CodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/AddBikeButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77272725">
+          <caret line="29" column="9" selection-start-line="17" selection-start-column="8" selection-end-line="29" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/FindUserByIdItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.543771">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/FindUserByBarcodeItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11447811">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/ChangePhoneNumberItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="59" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/RemoveBikeButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68686867">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="19" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/AddUserButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Garage/Bicycle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28619528">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="46" selection-start-line="68" selection-start-column="46" selection-end-line="68" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1440#1441#0" expanded="true" />
+            <element signature="e#1478#1479#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+            <element signature="e#1659#1660#0" expanded="true" />
+            <element signature="e#1817#1818#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/FindUserByIdButton.java">
+    <entry file="file://$PROJECT_DIR$/src/Garage/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="47" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="e#1231#1232#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Garage/BicycleGarageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
+          <folding>
+            <element signature="method#BicycleGarageManager#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#registerHardwareDrivers#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#addUser#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#removeUser#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#addBicycle#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#removeBicycle#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#updatePin#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#entryBarcode#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#exitBarcode#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#entryCharacter#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#populateUsers#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#fileWrite#0;class#BicycleGarageManager#0" expanded="false" />
+            <element signature="method#fileRead#0;class#BicycleGarageManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GenerateNewPinItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1042,18 +1290,40 @@
     <entry file="file://$PROJECT_DIR$/src/GUI/GarageGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <caret line="245" column="33" selection-start-line="245" selection-start-column="33" selection-end-line="245" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#GarageGUI#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#createAndShowGUI#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#initializeSaveOnExit#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#addComponentsToPane#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#addUserButton#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#getMainPanel#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#getMenu#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#createBicycles#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#createUsers#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#updateBicyclesModel#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#updateUsersModel#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#addUser#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#removeUser#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#addBike#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#removeBicycle#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#findUserByBarcode#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#findUserById#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#updateCurrentUserModel#0;class#GarageGUI#0" expanded="false" />
+            <element signature="method#generateNewPin#0;class#GarageGUI#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Garage/BicycleGarageManager.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/ViewStatisticsItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6195286">
-          <caret line="58" column="49" selection-start-line="58" selection-start-column="49" selection-end-line="58" selection-end-column="49" />
-          <folding />
+        <state vertical-scroll-proportion="1.2306397">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1059#1060#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

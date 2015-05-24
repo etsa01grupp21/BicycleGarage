@@ -60,7 +60,9 @@ public class PinCodeTerminalTestDriver implements PinCodeTerminal, ActionListene
 	 */
 	public PinCodeTerminalTestDriver() {
 		JFrame frame = new JFrame("Pin code terminal");
-		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); 
+		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		frame.setSize(250, 400);
+		frame.setLocationRelativeTo(null);
 		          // make the window impossible to close
 		JPanel panel = new JPanel();
 		panel.setLayout(new BorderLayout());
@@ -83,7 +85,6 @@ public class PinCodeTerminalTestDriver implements PinCodeTerminal, ActionListene
 			aButton.addActionListener(this);
 			k++;
 		}
-		frame.pack();
 		frame.setVisible(true);
 		redTimer = new Timer(1000, new ActionListener() {
 			public void actionPerformed(ActionEvent e) { 	// Inner class with code

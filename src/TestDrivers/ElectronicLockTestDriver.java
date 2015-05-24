@@ -25,11 +25,12 @@ public class ElectronicLockTestDriver implements ElectronicLock {
 	public ElectronicLockTestDriver(String doorIdentifier) {
 		JFrame frame = new JFrame(doorIdentifier);
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		frame.setSize(200, 100);
+		frame.setLocationRelativeTo(null);
 		JPanel panel = new JPanel();
 		frame.add(panel);
 		panel.add(state);
 		
-		frame.pack();
 		frame.setVisible(true);
 		
 		timer = new Timer(1000, new ActionListener() {

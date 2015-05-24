@@ -20,6 +20,7 @@ public class BicycleGarage {
         BarcodeReader readerExit = new BarcodeReaderExitTestDriver();
         readerEntry.register(manager);
         readerExit.register(manager);
+        new GarageGUI(manager);
     }
     public static void main(String[] args) {
         new GarageGUI(new BicycleGarageManager());

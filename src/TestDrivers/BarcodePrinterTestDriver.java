@@ -22,6 +22,8 @@ public class BarcodePrinterTestDriver implements BarcodePrinter {
 	 */
 	public BarcodePrinterTestDriver() {
 		frame = new JFrame("Bar code printer");
+		frame.setSize(200, 100);
+		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		
 		textArea = new JTextArea(5, 20);		
@@ -29,7 +31,6 @@ public class BarcodePrinterTestDriver implements BarcodePrinter {
 		textArea.setEditable(false);
 
 		frame.add(scrollPane);
-		frame.pack();
 		frame.setVisible(true);
 	}
 	

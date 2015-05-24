@@ -40,6 +40,8 @@ abstract public class BarcodeReaderTestDriver implements BarcodeReader, ActionLi
 		frame = new JFrame(windowName);
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 				// make the window impossible to close
+		frame.setSize(200, 100);
+		frame.setLocationRelativeTo(null);
 		JPanel panel = new JPanel();
 		panel.setLayout(new BorderLayout());
 		
@@ -52,7 +54,6 @@ abstract public class BarcodeReaderTestDriver implements BarcodeReader, ActionLi
 		panel.add(scanButton, BorderLayout.SOUTH);		
 		
 		frame.add(panel);
-		frame.pack();
 		frame.setVisible(true);
 	}	
 	

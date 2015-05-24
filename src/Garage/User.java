@@ -1,31 +1,32 @@
 package Garage;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
-    private int id;
+public class User implements Serializable {
+    private String id;
     private String pin;
     private String name;
     private boolean inside;
-    private int phoneNbr;
+    private String phoneNbr;
     private List<Bicycle> bicycles;
 
+    public User(String name, String id, String phoneNbr) {
+        this.id = id;
+        this.name = name;
+        this.inside = false;
+        this.phoneNbr = phoneNbr;
+        this.pin = CodeGenerator.generatePin();
+        this.bicycles = new ArrayList<>();
+    }
+    
     public String getPin() {
         return pin;
     }
 
     public void setPin(String pin) {
         this.pin = pin;
-    }
-
-    public User(String name, int id, int phoneNbr) {
-        this.id = id;
-        this.name = name;
-        this.inside = false;
-        this.phoneNbr = phoneNbr;
-        this.pin = CodeGenerator.getPin();
-        this.bicycles = new ArrayList<>();
     }
 
     public void addBicycle(Bicycle bicycle) {
@@ -36,7 +37,7 @@ public class User {
         return bicycles;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -44,7 +45,7 @@ public class User {
         return name;
     }
 
-    public int getPhoneNbr() {
+    public String getPhoneNbr() {
         return phoneNbr;
     }
 
@@ -52,16 +53,20 @@ public class User {
         this.inside = newInside;
     }
 
-    public boolean getInside() {
+    public boolean isInside() {
         return inside;
     }
 
     @Override
     public String toString() {
-        return this.name + "    ("+ id +")" + "    PIN: " + pin;
+        return this.name + "    ID:"+ id +  "    PIN: " + pin + "    Phone: " + phoneNbr;
     }
 
     public void removeBicycle(Bicycle bicycle) {
         bicycles.remove(bicycle);
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNbr = phoneNumber;
     }
 }

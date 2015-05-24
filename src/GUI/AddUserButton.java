@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AddUserButton extends JButton implements ActionListener {
+    public class AddUserButton extends JButton implements ActionListener {
 	
 	private GarageGUI gui;
 	
@@ -21,13 +21,20 @@ public class AddUserButton extends JButton implements ActionListener {
 		 int result = JOptionPane.showConfirmDialog(null, panel,
 				 "Please fill in the details", JOptionPane.OK_CANCEL_OPTION);
 		 if (result == JOptionPane.OK_OPTION) {
-			gui.addUser(panel.name.getText(), Integer.parseInt(panel.ssn.getText()), Integer.parseInt(panel.nbr.getText()));
+			 if(panel.name.getText().isEmpty() || panel.id.getText().isEmpty() || panel.nbr.getText().isEmpty()){
+				 JOptionPane.showMessageDialog(null,
+						 "Wrong Input!",
+						 "Error",
+						 JOptionPane.ERROR_MESSAGE);
+			 }else{
+				 gui.addUser(panel.name.getText(), panel.id.getText(), panel.nbr.getText());
+			 }
 		 }
 	 }
 
 	private class AddUserPanel extends JPanel {
 
-		private JTextField name, ssn, nbr;
+		private JTextField name, id, nbr;
 
 		public AddUserPanel(){
 			super(new GridLayout(3, 0, 0, 10));
@@ -39,9 +46,9 @@ public class AddUserButton extends JButton implements ActionListener {
 			name = new JTextField();
 			add(name);
 
-			add(new JLabel("SSN:"));
-			ssn = new JTextField();
-			add(ssn);
+			add(new JLabel("ID:"));
+			id = new JTextField();
+			add(id);
 
 			add(new JLabel("Phone number:"));
 			nbr = new JTextField();
