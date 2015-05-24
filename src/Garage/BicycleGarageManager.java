@@ -4,7 +4,14 @@ import Interfaces.BarcodePrinter;
 import Interfaces.ElectronicLock;
 import Interfaces.PinCodeTerminal;
 
-import java.util.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class BicycleGarageManager {
     BarcodePrinter printer;
@@ -31,7 +38,7 @@ public class BicycleGarageManager {
 
 
     public boolean addUser(User user) {
-        if(idToUser.get(user.getId()) != null) return false;
+        if (idToUser.get(user.getId()) != null) return false;
         else {
             idToUser.put(user.getId(), user);
             pinToUser.put(user.getPin(), user);
@@ -42,9 +49,9 @@ public class BicycleGarageManager {
 
     public boolean removeUser(User user) {
         User u = idToUser.get(user.getId());
-        if(u == null) return false;
+        if (u == null) return false;
         else {
-            for(Bicycle bike : u.getBicycles()){
+            for (Bicycle bike : u.getBicycles()) {
                 removeBicycle(bike);
             }
             idToUser.remove(u.getId());
@@ -91,9 +98,9 @@ public class BicycleGarageManager {
         int id = Integer.parseInt(bicycleID);
         Bicycle bike = barcodeToBicycle.get(id);
         if (bike != null && bike.isInside()) {
-                exitLock.open(15);
-                bike.getOwner().setInside(false);
-                bike.setInside(false);
+            exitLock.open(15);
+            bike.getOwner().setInside(false);
+            bike.setInside(false);
         }
         /*
          * Om (ägaren av cykeln är i garaget) {
@@ -123,10 +130,10 @@ public class BicycleGarageManager {
     }
 
     public void populateUsers() {
-        for(int i = 0; i<10; i++){
+        for (int i = 0; i < 10; i++) {
             String s = String.valueOf(i);
-            User u = new User("YOLOSWAG#" + s, i, i);
-            for(int b = 0; b<5; b++){
+            User u = new User("YOLOSWAG#" + s, i, "Nbr: " + s);
+            for (int b = 0; b < 5; b++) {
                 Bicycle bike = new Bicycle("NAME:" + b, u);
                 u.addBicycle(bike);
                 barcodeToBicycle.put(bike.getBarcode(), bike);
@@ -152,5 +159,40 @@ public class BicycleGarageManager {
 
     public User getUser(int i) {
         return idToUser.get(i);
+    }
+
+    public void fileWrite() {
+        ArrayList<Object> saveList = new ArrayList<>();
+        saveList.add(users);
+        saveList.add(pinToUser);
+        saveList.add(idToUser);
+        saveList.add(barcodeToBicycle);
+        CodeGenerator.saveCodeGenerator();
+        try {
+            ObjectOutputStream out =
+                    new ObjectOutputStream(new FileOutputStream("save.ser"));
+            out.writeObject(saveList);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+    }
+
+    public boolean fileRead() {
+        List<Object> readList = new ArrayList<>();
+        try {
+            ObjectInputStream in =
+                    new ObjectInputStream(new FileInputStream("save.ser"));
+            readList = (ArrayList) in.readObject();
+            users = (List<User>) readList.get(0);
+            pinToUser = (Map<String, User>) readList.get(1);
+            idToUser = (Map<Integer, User>) readList.get(2);
+            barcodeToBicycle = (Map<String, Bicycle>) readList.get(3);
+            CodeGenerator.readCodeGenerator();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 }

@@ -1,14 +1,15 @@
 package Garage;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public class User implements Serializable {
     private int id;
     private String pin;
     private String name;
     private boolean inside;
-    private int phoneNbr;
+    private String phoneNbr;
     private List<Bicycle> bicycles;
 
     public String getPin() {
@@ -19,7 +20,7 @@ public class User {
         this.pin = pin;
     }
 
-    public User(String name, int id, int phoneNbr) {
+    public User(String name, int id, String phoneNbr) {
         this.id = id;
         this.name = name;
         this.inside = false;
@@ -44,7 +45,7 @@ public class User {
         return name;
     }
 
-    public int getPhoneNbr() {
+    public String getPhoneNbr() {
         return phoneNbr;
     }
 

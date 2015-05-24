@@ -21,7 +21,7 @@ public class AddUserButton extends JButton implements ActionListener {
 		 int result = JOptionPane.showConfirmDialog(null, panel,
 				 "Please fill in the details", JOptionPane.OK_CANCEL_OPTION);
 		 if (result == JOptionPane.OK_OPTION) {
-			gui.addUser(panel.name.getText(), Integer.parseInt(panel.ssn.getText()), Integer.parseInt(panel.nbr.getText()));
+			gui.addUser(panel.name.getText(), Integer.parseInt(panel.ssn.getText()), panel.nbr.getText());
 		 }
 	 }
 

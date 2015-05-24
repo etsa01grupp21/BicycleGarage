@@ -8,8 +8,10 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
-public class GarageGUI extends JFrame {
+public class GarageGUI {
     private BicycleGarageManager manager;
     private JList<User> users;
     private JList<Bicycle> bicycles;
@@ -24,15 +26,26 @@ public class GarageGUI extends JFrame {
     private void createAndShowGUI() {
         JFrame frame = new JFrame("Bicyclegarage");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        initializeSaveOnExit(frame);
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         addComponentsToPane(frame.getContentPane());
-        setLayout(new BorderLayout());
         frame.pack();
         frame.setVisible(true);
+    }
+
+    private void initializeSaveOnExit(JFrame frame) {
+        frame.addWindowListener( new WindowAdapter()
+        {
+            public void windowClosing(WindowEvent e)
+            {
+                manager.fileWrite();
+            }
+        });
     }
 
     private void addComponentsToPane(Container contentPane) {
@@ -76,9 +89,10 @@ public class GarageGUI extends JFrame {
         findMenu.add(new FindUserByIdButton(this));
         menubar.add(findMenu);
 
-        JMenu viewMenu = new JMenu("View");
-        viewMenu.add(new ViewAllUsersButton(this));
-        menubar.add(viewMenu);
+        JMenu editMenu = new JMenu("Edit");
+        editMenu.add(new SaveButton(this, manager));
+        editMenu.add(new LoadButton(this, manager));
+        menubar.add(editMenu);
         return menubar;
     }
 
@@ -98,7 +112,7 @@ public class GarageGUI extends JFrame {
     }
 
     private JList<User> createUsers() {
-        manager.populateUsers();
+        if(!manager.fileRead()) manager.populateUsers();
         DefaultListModel<User> listModel = new DefaultListModel<>();
         for (User u : manager.getUsers()) {
             listModel.addElement(u);
@@ -147,7 +161,7 @@ public class GarageGUI extends JFrame {
         users.setModel(listModel);
     }
 
-    public void addUser(String name, int id, int nbr) {
+    public void addUser(String name, int id, String nbr) {
         User u = new User(name, id, nbr);
         if (manager.addUser(u)) updateUsersModel(u, true);
         else {

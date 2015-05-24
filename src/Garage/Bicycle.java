@@ -1,6 +1,8 @@
 package Garage;
 
-public class Bicycle {
+import java.io.Serializable;
+
+public class Bicycle implements Serializable {
     private String name;
     private String barcode;
     private User owner;
