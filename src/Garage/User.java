@@ -65,4 +65,10 @@ public class User implements Serializable {
     public void removeBicycle(Bicycle bicycle) {
         bicycles.remove(bicycle);
     }
+
+    public void generateNewPin() {
+        String tmp = this.pin;
+        this.pin = CodeGenerator.getPin();
+        CodeGenerator.addPin(tmp);
+    }
 }

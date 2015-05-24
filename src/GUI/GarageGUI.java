@@ -90,8 +90,7 @@ public class GarageGUI {
         menubar.add(findMenu);
 
         JMenu editMenu = new JMenu("Edit");
-        editMenu.add(new SaveButton(this, manager));
-        editMenu.add(new LoadButton(this, manager));
+        editMenu.add(new GenerateNewPinItem(this));
         menubar.add(editMenu);
         return menubar;
     }
@@ -151,9 +150,9 @@ public class GarageGUI {
         bicycles.setModel(listModel);
     }
 
-    private void updateUsersModel(User user, boolean add) {
+    private void updateUsersModel(User user, boolean addUser) {
         DefaultListModel<User> listModel = (DefaultListModel<User>) users.getModel();
-        if (add) listModel.addElement(user);
+        if (addUser) listModel.addElement(user);
         else {
             listModel.removeElement(user);
             if (listModel.isEmpty()) updateBicyclesModel(null);
@@ -222,5 +221,15 @@ public class GarageGUI {
             updateBicyclesModel(user);
             this.selectedUser = user;
         }
+    }
+
+    public void generateNewPin() {
+        selectedUser.generateNewPin();
+        updateCurrentUserModel(selectedUser, users.getSelectedIndex());
+    }
+
+    private void updateCurrentUserModel(User user, int selectedIndex) {
+        DefaultListModel<User> listModel = (DefaultListModel<User>) users.getModel();
+        listModel.setElementAt(user, selectedIndex);
     }
 }

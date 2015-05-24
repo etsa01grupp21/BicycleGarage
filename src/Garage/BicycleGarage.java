@@ -23,6 +23,6 @@ public class BicycleGarage {
         readerExit.register(manager);
     }
     public static void main(String[] args) {
-        new BicycleGarage();
+        new GarageGUI(new BicycleGarageManager());
     }
 }
