@@ -3,11 +3,13 @@ package GUI;
 import Garage.Bicycle;
 
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
+@SuppressWarnings("serial")
 public class ViewStatisticsItem extends JMenuItem implements ActionListener {
 
     private GarageGUI gui;

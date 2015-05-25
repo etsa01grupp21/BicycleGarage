@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("serial")
 public class User implements Serializable {
     private String id;
     private String pin;
@@ -20,13 +21,15 @@ public class User implements Serializable {
         this.pin = CodeGenerator.generatePin();
         this.bicycles = new ArrayList<>();
     }
-    
-    public String getPin() {
-        return pin;
-    }
 
-    public void setPin(String pin) {
+    public User(String name, String id, String phoneNbr, String pin) {
+        this.id = id;
+        this.name = name;
+        this.inside = false;
+        this.phoneNbr = phoneNbr;
         this.pin = pin;
+        CodeGenerator.addPin(pin);
+        this.bicycles = new ArrayList<>();
     }
 
     public void addBicycle(Bicycle bicycle) {
@@ -40,6 +43,14 @@ public class User implements Serializable {
     public String getId() {
         return id;
     }
+    
+    public String getPin() {
+        return pin;
+    }
+
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
 
     public String getName() {
         return name;
@@ -49,12 +60,16 @@ public class User implements Serializable {
         return phoneNbr;
     }
 
-    public void setInside(boolean newInside) {
-        this.inside = newInside;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNbr = phoneNumber;
     }
 
     public boolean isInside() {
         return inside;
+    }
+    
+    public void setInside(boolean newInside) {
+        this.inside = newInside;
     }
 
     @Override
@@ -64,9 +79,5 @@ public class User implements Serializable {
 
     public void removeBicycle(Bicycle bicycle) {
         bicycles.remove(bicycle);
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNbr = phoneNumber;
     }
 }

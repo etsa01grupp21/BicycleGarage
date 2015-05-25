@@ -23,6 +23,6 @@ public class BicycleGarage {
         new GarageGUI(manager);
     }
     public static void main(String[] args) {
-        new GarageGUI(new BicycleGarageManager());
+        new BicycleGarage();
     }
 }

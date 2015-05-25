@@ -5,6 +5,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("serial")
 public class Bicycle implements Serializable {
     private String name;
     private String barcode;
@@ -20,16 +21,21 @@ public class Bicycle implements Serializable {
         timeStamps = new ArrayList<>();
     }
 
+    public Bicycle(String name, User owner, String barcode) {
+        this.name = name;
+        this.barcode = barcode;
+        CodeGenerator.addTakenBarcode(barcode);
+        this.owner = owner;
+        this.inside = false;
+        timeStamps = new ArrayList<>();
+    }
+
     public String getName() {
         return name;
     }
 
     public String getBarcode() {
         return barcode;
-    }
-
-    public String getLastUsed() {
-        return null;
     }
 
     public User getOwner() {
@@ -42,6 +48,7 @@ public class Bicycle implements Serializable {
         } else {
             this.inside = inside;
             if (inside) {
+            	
                 timeStamps.add(new Stamp());
             } else {
                 timeStamps.get(timeStamps.size() - 1).stampOut();
@@ -66,21 +73,22 @@ public class Bicycle implements Serializable {
         return this.timeStamps;
     }
 
-    public class Stamp implements Serializable{
+    public class Stamp implements Serializable {
 
         private Timestamp in, out;
 
-        private Stamp(){
+        private Stamp() {
             in = new Timestamp(System.currentTimeMillis());
         }
 
-        private void stampOut(){
+        private void stampOut() {
             out = new Timestamp(System.currentTimeMillis());
         }
 
         @Override
-        public String toString(){
-            return "In: " + in.toString() + "    Out: " + out.toString();
+        public String toString() {
+            if (out == null) return "In: " + in.toString();
+            else return "In: " + in.toString() + "    Out: " + out.toString();
         }
     }
 }

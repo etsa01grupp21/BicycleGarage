@@ -1,9 +1,11 @@
 package GUI;
 
 import javax.swing.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+@SuppressWarnings("serial")
 public class AddBikeButton extends JButton implements ActionListener {
 
 	private GarageGUI gui;

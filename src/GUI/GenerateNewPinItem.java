@@ -3,9 +3,11 @@ package GUI;
 import Garage.User;
 
 import javax.swing.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+@SuppressWarnings("serial")
 public class GenerateNewPinItem extends JMenuItem implements ActionListener {
 
     private GarageGUI gui;

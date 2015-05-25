@@ -8,8 +8,7 @@ import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.awt.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+
 
 public class GarageGUI {
 	private BicycleGarageManager manager;
@@ -26,9 +25,8 @@ public class GarageGUI {
 	private void createAndShowGUI() {
 		JFrame frame = new JFrame("Bicyclegarage");
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(700, 400);
+        frame.setSize(1000, 600);
         frame.setLocationRelativeTo(null);
-		initializeSaveOnExit(frame);
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (Exception e) {
@@ -37,14 +35,6 @@ public class GarageGUI {
 
 		addComponentsToPane(frame.getContentPane());
 		frame.setVisible(true);
-	}
-
-	private void initializeSaveOnExit(JFrame frame) {
-		frame.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {
-				manager.fileWrite();
-			}
-		});
 	}
 
 	private void addComponentsToPane(Container contentPane) {
@@ -117,7 +107,7 @@ public class GarageGUI {
 
 	private JList<User> createUsers() {
 		if (!manager.fileRead())
-			manager.populateUsers();
+			manager.addTestUsers();
 		DefaultListModel<User> listModel = new DefaultListModel<>();
 		for (User u : manager.getUsers()) {
 			listModel.addElement(u);
@@ -138,6 +128,7 @@ public class GarageGUI {
 	}
 
 	private void updatedSelectedUser(User user) {
+		this.selectedBicycle = null;
 		this.selectedUser = user;
 	}
 
@@ -184,9 +175,12 @@ public class GarageGUI {
 	}
 
 	public void removeUser() {
+		if (JOptionPane.showConfirmDialog(null, "Are you sure you want to remove " + selectedUser + "?", "Confirm deletion", 0) == 0) {
 		manager.removeUser(selectedUser);
 		updateUsersModel(selectedUser, false);
 		selectedUser = null;
+		updateBicyclesModel(null);
+		}
 	}
 
 	public void addBike(String bikeName) {
@@ -198,10 +192,12 @@ public class GarageGUI {
 	}
 
 	public void removeBicycle() {
+		if (JOptionPane.showConfirmDialog(null, "Are you sure you want to remove " + selectedBicycle + "?", "Confirm deletion", 0) == 0) {
 		manager.removeBicycle(selectedBicycle);
 		selectedBicycle.delete();
 		updateBicyclesModel(selectedBicycle.getOwner());
 		selectedBicycle = null;
+		}
 	}
 
 	public User getSelectedUser() {
